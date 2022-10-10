@@ -1,0 +1,262 @@
+/*  JavaScript 6th Edition
+    Chapter 8
+    Chapter case
+
+    Golden Rocks National Park
+    Large format style sheet
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 800px;
+   margin: 0 auto;
+   font-family: roboto, arial, helvetica, sans-serif;
+   background: rgb(230,230,230);
+}
+
+ol, ul {
+   list-style: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* container */
+#container {
+   overflow: auto;
+   position: relative;
+   height: 119px;
+   background: rgb(202,230,233);
+}
+
+/* page header */
+header {
+   height: 119px;
+   float: right;
+}
+
+header h1 img {
+   display: block;
+}
+
+header h1 span {
+   position: absolute;
+   top: 0;
+   left: 0;
+   color: rgb(126,20,23);
+   font-size: 36px;
+   padding: 10px;
+   font-weight: 700;
+}
+
+/* navigation */
+nav {
+   width: 481px;
+   padding: 10px;
+   color: rgb(126,20,23);
+   background: rgb(97,170,201);
+   font-size: 17px;
+   float: left;
+   margin-top: 59px;
+}
+
+nav ul {
+   text-align: center;
+}
+
+nav ul li {
+   padding: 2px 10px;
+   display: inline-block;
+   margin: 0 10px;
+   background: rgb(216,217,219);
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+
+nav ul li:hover, nav ul li.currentPage {
+   background: rgb(126,20,23);
+   color: rgb(216,217,219);
+}
+
+/* main content */
+article {
+   padding: 20px 20px 40px;
+   background: white;
+   position: relative;
+   overflow: auto;
+}
+
+article h2 {
+   font-size: 32px;
+   width: 441px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+article h3 {
+   font-size: 24px;
+   font-weight: bold;
+   text-align: center;
+}
+
+article h4 {
+   font-size: 18px;
+   margin-top: 10px;
+   font-weight: bold;
+}
+
+/* profile section */
+#profile {
+   float: right;
+   width: 279px;
+   border: 1px solid black;
+   background: white;
+   padding: 20px;
+   background: rgb(216,217,219);
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+
+#profile, #usernameSection, #emailSection, #lodgingsSection {
+   display: none;
+}
+
+#profile li, #profile p {
+   text-indent: 1em;
+   margin-top: 5px;
+}
+
+/* form */
+form {
+   width: 441px;
+   float: left;
+}
+
+fieldset.text, fieldset.checks {
+   position: relative;
+   padding: 5px 30px 5px 0;
+   margin-right: 15px;
+}
+
+legend {
+   font-weight: bold;
+   font-size: 18px;
+   text-align: left;
+   padding-left: 1.4em;
+   margin-bottom: 0.5em;
+}
+
+legend span {
+   text-align: right;
+}
+
+input, label {
+   position: relative;
+   line-height: 1.2em;
+   display: block;
+}
+
+fieldset.checks input {
+   float: left;
+   clear: left;
+   margin-right: 5px;
+   margin-left: 5em;
+   font-size: 18px;
+}
+
+fieldset.checks label {
+   line-height: 1.2em;
+   margin-bottom: 4px;
+}
+
+fieldset.text label {
+   width: 10em;
+   text-align: right;
+   float: left;
+   clear: left;
+   margin: 5px 10px 0 0;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+fieldset.text input {
+   margin: 7px 5px 0 0;
+}
+
+input[type=button] {
+   margin: 15px auto 0;
+   font-size: 16px;
+   background: rgb(202,230,233);
+   width: 9em;
+}
+
+p.errorMsg {
+   display: none;
+   color: red;
+   text-align: center;
+}
+
+/* footer */
+footer {
+   background: rgb(202,230,233);
+   text-align: center;
+   padding: 10px;
+   color: rgb(126,20,23);
+   font-size: 16px;
+}

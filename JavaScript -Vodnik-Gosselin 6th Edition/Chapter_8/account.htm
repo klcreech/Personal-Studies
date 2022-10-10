@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 8
+      Chapter case
+
+      Golden Rocks National Park account setup page
+      Author: Kerry Creech
+      Date:  3/2/20 
+
+      Filename: account.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Golden Rocks National Park - Account Setup</title>
+   <link rel="stylesheet" media="screen and (max-device-width: 999px)" href="styleshh.css" />
+   <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="styles.css" />
+   <!--[if lt IE 9]>
+      <link rel="stylesheet" href="styles.css" />
+   <![endif]-->
+   <link href='' rel='stylesheet' type='text/css'>
+   <script src="modernizr.custom.65897.js"></script>
+</head>
+
+<body>
+   <div id="container">
+      <header>
+         <h1>
+            <img src="images/park.png" width="319" height="118" alt="person fishing next to a rock pile" title="" />
+            <span>Golden Rocks National Park</span>
+         </h1>
+      </header>
+   
+      <nav>
+         <ul>
+            <li><a href="#">Activities</a></li>
+            <li><a href="#">Map</a></li>
+            <li class="currentPage"><a href="#">Reservations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+   </div>
+      
+   <article>
+      <h2>Create An Account</h2>
+      <form>
+         <fieldset class="text">
+            <label for="uname">Username</label>
+            <input type="text" id="uname" />
+            <p id="usernameError" class="errorMsg"></p>
+            <label for="pw1">Password</label>
+            <input type="password" id="pw1" />
+            <label for="pw2">Password (confirm)</label>
+            <input type="password" id="pw2" />
+            <p id="passwordError" class="errorMsg"></p>
+            <label for="email">Email Address</label>
+            <input type="email" id="emailbox" />
+            <p id="emailError" class="errorMsg"></p>
+         </fieldset>
+         <fieldset class="checks">
+            <legend><span>Preferred Lodgings</span></legend>
+            <input type="checkbox" id="fire" value="Fire Cabins" name="lodgings" />
+            <label for="fire" id="fireLabel">Fire Cabins</label>
+            <input type="checkbox" id="horseshoe" value="Horseshoe Cabins" name="lodgings" />
+            <label for="horseshoe" id="horseshoeLabel">Horseshoe Cabins</label>
+            <input type="checkbox" id="spruce" value="Spruce Cabins" name="lodgings" />
+            <label for="spruce" id="spruceLabel">Spruce Cabins</label>
+            <input type="checkbox" id="ursamajor" value="Ursa Major Cabins" name="lodgings" />
+            <label for="ursamajor" id="ursamajorLabel">Ursa Major Cabins</label>
+            <input type="checkbox" id="bearmeadow" value="Bear Meadow Campground" name="lodgings" />
+            <label for="bearmeadow" id="bearmeadowLabel">Bear Meadow Campground</label>
+            <input type="checkbox" id="lakeside" value="Lakeside Campground" name="lodgings" />
+            <label for="lakeside" id="lakesideLabel">Lakeside Campground</label>
+            <input type="checkbox" id="leadfoot" value="Leadfoot Campground" name="lodgings" />
+            <label for="leadfoot" id="leadfootLabel">Leadfoot Campground</label>
+            <input type="checkbox" id="talus" value="Talus Campground" name="lodgings" />
+            <label for="talus" id="talusLabel">Talus Campground</label>
+         </fieldset>
+         <input type="button" id="createBtn" value="Create Account" />
+      </form>
+      <section id="profile">
+         <h3>Profile</h3>
+         <div id="usernameSection">
+            <h4>Username</h4>
+            <p id="profileUsername"></p>
+         </div>
+         <div id="emailSection">
+            <h4>Email address</h4>
+            <p id="profileEmail"></p>
+         </div>
+         <div id="lodgingsSection">
+            <h4>Preferred Lodgings</h4>
+            <ul id="profileLodgings"></ul>
+         </div>
+      </section>
+   </article>
+   <footer><p>Golden Rocks National Park &bull; Golden Rocks, AK</p></footer>
+   <script src="goldrock.js"></script>
+</body>
+</html>
