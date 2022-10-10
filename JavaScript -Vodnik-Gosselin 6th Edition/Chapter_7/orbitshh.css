@@ -1,0 +1,337 @@
+/*  JavaScript 6th Edition
+    Chapter 7
+    Chapter case
+
+    Outer Orbits
+    Handheld style sheet
+
+    Filename: orbitshh.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   width: 100%;
+   line-height: 1;
+   font-family: roboto, arial, helvetica, sans-serif;
+   background: black;
+   background: url(images/tile.jpg) repeat;
+   background: url(images/bg.jpg) left top no-repeat, url(images/tile.jpg) repeat;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* page header */
+header {
+   margin-top: 20px;
+   background: rgb(46,49,146);
+   color: white;
+   padding: 5px;
+   position: relative;
+   -moz-border-radius-topleft: 10px;
+   -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   -moz-border-radius-topright: 10px;
+   -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header h1 {
+   font-family: roboto, arial, helvetica, sans-serif;
+   font-size: 20pt;
+   text-transform: uppercase;
+   text-align: right;
+   font-weight: bold;
+   color: white;
+   background: rgb(46,49,146);
+   -moz-border-radius-topleft: 10px;
+   -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   -moz-border-radius-topright: 10px;
+   -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header h1 img {
+   display: none;
+}
+
+header p {
+   text-align: right;
+   font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+   font-size: 12pt;
+}
+
+header p span {
+   color: #ffcb40;
+   font-size: 14pt;
+}
+
+/* navigation */
+nav {
+   margin-top: 10px;
+   color: white;
+   font-size: 12pt;
+}
+
+nav ul {
+   text-align: center;
+}
+
+nav ul li {
+   padding: 2px 10px;
+   display: inline-block;
+   margin: 0 10px;
+   background: black;
+}
+
+nav ul li:hover, nav ul li.currentPage {
+   background: rgb(216,217,219);
+   color: black;
+}
+
+/* main content */
+article {
+   padding: 20px 20px 40px;
+   background: rgb(216,217,219);
+   margin-top: 10px;
+   position: relative;
+}
+
+article h2 {
+   font-size: 14pt;
+   font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+   color: rgb(46,49,146);
+}
+
+article h3 {
+   font-size: 13pt;
+   font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+   color: rgb(46,49,146);
+}
+
+article h4 {
+   font-size: 12pt;
+   font-family: roboto, arial, helvetica, sans-serif;
+   color: rgb(46,49,146);
+   margin-top: 10px;
+}
+
+/* ticket section */
+#ticket {
+   border: 1px solid black;
+   background: white;
+   padding: 20px;
+   -moz-border-radius-topleft: 10px;
+   -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   -moz-border-radius-topright: 10px;
+   -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#ticket, #dateSection, #passengersSection, #countdownSection {
+   display: none;
+}
+
+#ticket li, #ticket p {
+   text-indent: 1em;
+   margin-top: 5px;
+}
+
+#countdown {
+   font-weight: bold;
+}
+
+/* form */
+fieldset {
+   position: relative;
+   padding: 5px;
+}
+
+legend {
+   font-weight: bold;
+   font-size: 14px;
+}
+
+input, label {
+   line-height: 1.2em;
+   display: block;
+}
+
+fieldset.checks input {
+   float: left;
+   clear: left;
+   margin-right: 5px;
+}
+
+fieldset.checks label {
+   line-height: 1.2em;
+   margin-bottom: 4px;
+}
+
+fieldset.text label {
+   width: 5em;
+   text-align: right;
+   float: left;
+   clear: left;
+   margin-right: 10px;
+   margin-top: 5px;
+}
+
+fieldset.text input {
+   margin-top: 5px;
+   margin-right: 5px;
+}
+
+#addName {
+   margin-left: 9.5em;
+}
+
+/* calendar */
+#cal {
+   display: none;
+   position: absolute;
+   top: 0;
+   background: black;
+   color: white;
+   padding: 10px;
+   -moz-border-radius-topleft: 10px;
+   -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   -moz-border-radius-topright: 10px;
+   -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;*/
+}
+
+#cal table {
+   clear: both;
+}
+
+#cal table caption {
+   font-weight: bold;
+   font-size: 14pt;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background: rgb(46,49,146);
+}
+
+#cal table th {
+   text-align: right;
+}
+
+#cal table th, #cal table td {
+   width: 2em;
+   padding: 4px;
+}
+
+#cal table td {
+   color: rgb(178,184,183);
+   text-align: right;
+   cursor: pointer;
+}
+
+#prev {
+   float: left;
+   padding: 4px;
+   cursor: pointer;
+}
+
+#next {
+   float: right;
+   padding: 4px;
+   cursor: pointer;
+}
+
+#cal table td.futuredate {
+   color: white;
+}
+
+#cal table td.futuredate:hover, #prev:hover, #next:hover, #close:hover {
+   background: yellow;
+   color: black;
+}
+
+#close {
+   color: white;
+   float: right;
+   padding: 0 4px;
+   cursor: pointer;
+}
+
+#close span {
+   font-size: 20pt;
+}
+
+/* footer */
+footer {
+   text-align: right;
+   padding-right: 10px;
+}
+
+footer p {
+   display: inline-block;
+   margin-top: 10px;
+   background: black;
+   color: white;
+   font-size: 12px;
+}
+
+footer p span {
+   color: #ffcb40;
+}
