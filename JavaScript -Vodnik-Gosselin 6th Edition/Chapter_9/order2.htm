@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 9
+      Chapter case
+
+      Eating Well in Season order page
+      Author: Creech
+      Date:   3/1/20
+
+      Filename: order2.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Eating Well in Season - Order</title>
+   <link rel="stylesheet" media="screen and (max-device-width: 999px)" href="styleshh.css" />
+   <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="styles.css" />
+   <!--[if lt IE 9]>
+      <link rel="stylesheet" href="styles.css" />
+   <![endif]-->
+   <link href='' rel='stylesheet' type='text/css'>
+   <script src="modernizr.custom.65897.js"></script>
+</head>
+
+<body>
+   <div id="container">
+      <header>
+         <hgroup>
+            <h1>
+               <img src="images/ewis.png" alt="" title="" />
+            </h1>
+            <p>Eating Well in Season</p>
+         </hgroup>
+      </header>
+   
+      <nav>
+         <ul>
+            <li><a href="#">About Us</a></li>
+            <li class="currentPage"><a href="#">Sign Up</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+   </div>
+      
+   <article>
+      <h2>Sign Up</h2>
+
+      <div class="trail">
+         <div class="otherPage">Your info</div>
+         <div class="currentPage">Your preferences</div>
+      </div>
+
+      <form action="results.htm">
+         <input type="hidden" id="name" name="name" />
+         <input type="hidden" id="email" name="email" />
+         <input type="hidden" id="phone" name="phone" />
+         <input type="hidden" id="address" name="address" />
+         <input type="hidden" id="city" name="city" />
+         <input type="hidden" id="state" name="state" />
+         <input type="hidden" id="zip" name="zip" />
+
+         <fieldset class="checks" id="fs1">
+            <legend>Food allergies</legend>
+            <textarea id="allergyDesc" name="allergies"></textarea>
+         </fieldset>
+
+         <fieldset class="checks">
+            <legend>Frequency</legend>
+            <input type="radio" id="weekly" value="Weekly" name="frequency" />
+            <label for="weekly" id="weeklyLabel">Weekly</label>
+            <input type="radio" id="biweekly" value="Biweekly" name="frequency" />
+            <label for="biweekly" id="biweeklyLabel">Biweekly</label>
+            <input type="radio" id="monthly" value="Monthly" name="frequency" />
+            <label for="monthly" id="monthlyLabel">Monthly</label>
+         </fieldset>
+         <fieldset class="checks">            
+            <legend>Package size</legend>
+            <input type="radio" id="taste" value="Taste test" name="size" />
+            <label for="taste" id="tasteLabel">Taste test</label>
+            <input type="radio" id="highlight" value="Healthy highlight" name="size" />
+            <label for="highlight" id="highlightLabel">Healthy Highlight</label>
+            <input type="radio" id="full" value="Full plate" name="size" />
+            <label for="full" id="fullLabel">Full plate</label>
+         </fieldset>
+         <fieldset class="btn">
+            <input type="submit" id="signupBtn" value="Sign Up" />
+         </fieldset>
+      </form>
+   </article>
+   <footer><p>Eating Well in Season &bull; Glover, VT</p></footer>
+   <script src="script2.js"></script>
+</body>
+</html>
