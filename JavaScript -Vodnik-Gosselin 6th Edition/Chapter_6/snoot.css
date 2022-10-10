@@ -1,0 +1,340 @@
+/*  JavaScript 6th Edition
+    Chapter 6
+    Chapter case
+
+    Snoot Flowers
+    Large format style sheet
+
+    Filename: snoot.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 800px;
+   margin: 0 auto;
+   font-family: arial, sans-serif;
+   background: rgb(246,245,242);
+}
+
+ol, ul {
+   list-style: none;
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* container for header and nav */
+div.container {
+   float: left;
+}
+
+/* page header */
+header {
+   border: 2px solid rgb(190,50,38);
+   border-right: none;
+   padding: 30px 10px;
+   text-align: center;
+   line-height: 1.8em;
+   background: white;
+   width: 219px;
+   float: left;
+   -moz-border-radius-topleft: 10px;
+   -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   -moz-border-radius-bottomleft: 10px;
+   -webkit-border-bottom-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+
+header h1 {
+   font-family:  arial, sans-serif;
+   font-size: 28pt;
+   text-transform: lowercase;
+   color: rgb(190,50,38);
+}
+
+header h1 img {
+   display: inline-block;
+}
+
+/* remove blank space for descenders below image */
+#accent img {
+   display: block;
+}
+
+/* navigation */
+nav {
+   width: 219px;
+   padding: 10px;
+   float: left;
+   clear: left;
+}
+
+nav ul li {
+   width: 179px;
+   min-height: 50px;
+   padding: 10px;
+   margin: 0 0 10px 10px;
+   line-height: 2.0em;
+   font-weight: bold;
+   font-size: 16px;
+   background: rgb(124,124,136);
+   color: white;
+   text-align: center;
+   border: 1px solid rgb(0,89,132);
+}
+
+nav ul li:hover {
+   background: rgb(0,89,132);
+}
+
+/* main content */
+article {
+   background: #4DA375;
+   width: 581px;
+   float: right;
+   padding: 10px;
+}
+
+article h2 {
+   font-size: 28px;
+   font-weight: bold;
+   text-align: center;
+   font-family:  arial, sans-serif;
+   text-shadow: 10px 0px 17px white,
+                -10px 0px 17px white;
+}
+
+article div.results {
+   background: white;
+   border-radius: 5px;
+   margin: 5px 15px 15px;
+   padding: 5px 30px;
+}
+
+article h3 {
+   font-size: 18pt;
+   font-weight: bold;
+   text-align: center;
+   padding-bottom: 10px;
+}
+
+article div.results p {
+   margin-left: 35%;
+   padding-bottom: 5px;
+}
+
+#errorText {
+   display: none;
+   text-align: center;
+   padding: 10px;
+   margin: 0 auto;
+   margin: 15px 15px 0;
+   background: rgb(124,124,136);
+   color: white;
+   border: 2px solid rgb(190,50,38);
+}
+
+/* form */
+form {
+   width: 561px;
+   margin: 0 auto;
+   padding-bottom: 15px;
+}
+
+fieldset {
+   position: relative;
+   padding: 5px 30px 70px 30px;
+   background: white;
+   border-radius: 5px;
+   margin-left: 15px;
+   margin-right: 15px;
+   margin-bottom: 25px;
+}
+
+fieldset:last-of-type {
+   margin-bottom: 0;
+}
+
+legend {
+   font-weight: bold;
+   font-size: 26px;
+   font-family:  arial, sans-serif;
+   position: absolute;
+   padding: 10px 0;
+}
+
+input, label, select, textarea, fieldset p, div.errorMessage, #ccNumErrorMessage, #cvvErrorMessage {
+   position: relative;
+   top: 50px;
+   line-height: 1.2em;
+}
+
+label, input {
+   display: block;
+}
+
+#expMoLabel, #expYrLabel {
+   position: absolute;
+   left: -10000px;
+}
+
+#buttonContainer {
+   width: 100%;
+   text-align: center;
+}
+
+#orderButton {
+   margin: 0 auto;
+   font-family:  arial, sans-serif;
+   font-size: 20px;
+   top: 15px;
+   -webkit-appearance: none;
+   display: inline-block;
+}
+
+fieldset.checks input, div.checks input {
+   float: left;
+   margin-right: 5px;
+}
+
+fieldset.checks textarea {
+   margin-left: 21px;
+   width: 90%;
+   height: 50px;
+}
+
+fieldset.text label {
+   width: 8em;
+   text-align: right;
+   float: left;
+   clear: left;
+   margin-right: 10px;
+   margin-top: 5px;
+}
+
+fieldset.text input, fieldset.text select {
+   margin-top: 5px;
+   margin-right: 5px;
+}
+
+fieldset div.errorMessage, #ccNumErrorMessage, #cvvErrorMessage {
+   display: none;
+   color: red;
+   margin-top: 10px;
+}
+
+#ccNumErrorMessage, #cvvErrorMessage {
+   margin-left: 8.5em;
+}
+
+div.checks label {
+   width: auto;
+   text-align: left;
+   float: none;
+   clear: none;
+}
+
+div.inline label, div.inline input, div.inline select, div.inline div {
+   display: inline-block;
+   float: none;
+   text-align: center;
+   width: auto;
+}
+
+div.inline option {
+   text-align: left;
+}
+
+#billFName, #billLName, #delivFName, #delivLName, #billCity, #delivCity, #billPhone, #delivPhone {
+   width: 15em;
+}
+
+#billStreet, #delivStreet, #billEmail, #delivEmail {
+   width: 20em;
+}
+
+#billZip, #delivZip {
+   width: 10em;
+}
+
+#ccNum {
+   width: 16em;
+}
+
+#cvv {
+   width: 4em;
+}
+
+/* footer */
+footer {
+   width: 581px;
+   color: white;
+   background: rgb(124,124,136);
+   font-size: 16px;
+   padding: 10px;
+   text-align: center;
+   float: right;
+}
